@@ -1,0 +1,18 @@
+@import compass/reset
+@import compass/bonbon
+
+@include reset-html5
+
+html
+  font: 62.5%/1 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif
+
+body
+  background:
+    color: #DDDDDD
+  margin: 0 auto
+  padding: 100px
+
+// It appears that the Pictos Font resets the line-height of the icon. So if you are using them, delete the line below.
+.icon:before
+  line:
+    height: 0.7em
