@@ -22,8 +22,7 @@
   margin: 0.5em
   display: inline-block
   position: relative
-  -webkit-border-radius: 8px
-  -moz-border-radius: 8px
+  @include border-radius(8px)
   /* effects
   border:
     bottom: 1px solid rgba(0, 0, 0, 0.1)
@@ -181,8 +180,7 @@
     height: 60%
     top: 0
     left: 5%
-    -webkit-border-radius: 0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em
-    -moz-border-radius: 0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em
+    @include border-radius(0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em)
     background-image: -webkit-gradient(linear, 0% 0, 100% 0, from(rgba(255, 255, 255, 0.55)), to(rgba(255, 255, 255, 0.5)), color-stop(0.5, rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)))
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5))
   &.glossy:active:after, &.glass:active:after, &.disabled:after
@@ -202,14 +200,12 @@
 .round
   border:
     top: none
-  -webkit-border-radius: 1em
-  -moz-border-radius: 1em
+  @include border-radius(1em)
   &.glossy:after,
   &.glass:after
     border:
       top: none
-    -webkit-border-radius: 1em
-    -moz-border-radius: 1em
+    @include border-radius(1em)
 
 /* oval
 
@@ -219,37 +215,31 @@
   padding:
     left: 0.8em
     right: 0.8em
-  -webkit-border-radius: 5em / 2em
-  -moz-border-radius: 5em / 2em
+  @include border-radius(5em / 2em)
   &.glossy:after,
   &.glass:after
     top: 5%
-    -webkit-border-radius: 5em / 2em 2em 1em 1em
-    -moz-border-radius: 5em / 2em 2em 1em 1em
+    @include border-radius(5em / 2em 2em 1em 1em)
   &.icon
     padding:
       left: 0.8em
       right: 0.8em
-    -webkit-border-radius: 1.5em / 1em
-    -moz-border-radius: 1.5em / 1em
+    @include border-radius(1.5em / 1em)
     &.glossy:after,
     &.glass:after
-      -webkit-border-radius: 1.5em / 1em
-      -moz-border-radius: 1.5em / 1em
+      @include border-radius(1.5em / 1em)
 
 /* brackets
 
 .brackets
   border:
     top: none
-  -webkit-border-radius: 0.5em / 1em
-  -moz-border-radius: 0.5em / 1em
+  @include border-radius(0.5em / 1em)
   &.glossy:after,
   &.glass:after
     border:
       top: none
-    -webkit-border-radius: 0.5em / 1em
-    -moz-border-radius: 0.5em / 1em
+    @include border-radius(0.5em / 1em)
 
 /* skew
 
@@ -259,13 +249,11 @@
   padding:
     left: 0.8em
     right: 1.2em
-  -webkit-border-radius: 5em 1em / 5em 1em
-  -moz-border-radius: 5em 1em / 5em 1em
+  @include border-radius(5em 1em / 5em 1em)
   &.glossy:after,
   &.glass:after
     left: 10%
-    -webkit-border-radius: 7em 1em / 5em 1em
-    -moz-border-radius: 7em 1em / 5em 1em
+    @include border-radius(7em 1em / 5em 1em)
   &.icon
     padding:
       left: 0.8em
@@ -277,13 +265,11 @@
   border:
     top:
       color: rgba(255, 255, 255, 0.5)
-  -webkit-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
-  -moz-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
+  @include border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
   &.glossy:after,
   &.glass:after
     border-top-color: rgba(255, 255, 255, 0.5)
-    -webkit-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
-    -moz-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
+    @include border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
   &.glossy:after,
   &.glass:after
     left: 6%
@@ -294,30 +280,25 @@
 .knife
   padding:
     left: 1.5em
-  -webkit-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em
-  -moz-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em
+  @include border-radius(0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em)
   &.glossy:after,
   &.glass:after
     left: 3%
     width: 97%
-    -webkit-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em
-    -moz-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em
+    @include border-radius(0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em)
   &.glossy.icon:after,
   &.glass.icon:after
     left: 5%
     width: 95%
-    -webkit-border-radius: 0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em
-    -moz-border-radius: 0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em
+    @include border-radius(0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em)
 
 /* shield
 
 .shield
-  -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
-  -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
+  @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   &.glossy:after,
   &.glass:after
-    -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
-    -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
+    @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   padding:
     left: 0.8em
     right: 0.8em
@@ -331,13 +312,11 @@
 .drop
   border:
     top: none
-  -webkit-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em
-  -moz-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em
+  @include border-radius(2em 5em 2em 0.6em / 2em 4em 2em 0.6em)
   &.glossy:after,
   &.glass:after
     left: 4%
-    -webkit-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em
-    -moz-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em
+    @include border-radius(2em 6em 2em 1em / 2em 4em 2em 2em)
   &.icon
     padding:
       right: 0.6em
@@ -347,16 +326,13 @@
 .morph
   border:
     top: none
-  -webkit-border-radius: 5em / 2em
-  -moz-border-radius: 5em / 2em
+  @include border-radius(5em / 2em)
   -webkit-transition: -webkit-border-radius .3s ease-in-out
   -moz-transition: -moz-border-radius .3s ease-in-out
   &:hover
-    -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
-    -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
+    @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   &:active
-    -webkit-border-radius: .3em
-    -moz-border-radius: .3em
+    @include border-radius(0.3em)
   &:after
     display: none
 
