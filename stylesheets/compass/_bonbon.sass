@@ -1,57 +1,66 @@
-/* BonBon Buttons 1.0 by simurai.com
+@import compass/css3
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:bold+Lobster)
 @import url(http://fonts.googleapis.com/css?family=Lobster)
 @import url(pictos/pictos.css)
 
+/* BonBon Buttons 1.0 by simurai.com
+
 /* -------------- button --------------
 
 .button
   /* text
-  text-decoration: none
-  font: 24px / 1em "Droid Sans", sans-serif
-  font-weight: bold
-  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0
-  -webkit-user-select: none
-  -moz-user-select: none
+  text:
+    decoration: none
+    shadow: rgba(255, 255, 255, 0.5) 0 1px 0
+  font: 24px / 1em 'Droid Sans', sans-serif
+    weight: bold
+  user:
+    select: none
   /* layout
-  padding: .5em .6em .4em .6em
-  margin: .5em
+  padding: 0.5em 0.6em 0.4em 0.6em
+  margin: 0.5em
   display: inline-block
   position: relative
   -webkit-border-radius: 8px
   -moz-border-radius: 8px
   /* effects
-  border-top: 1px solid rgba(255, 255, 255, 0.8)
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  border:
+    bottom: 1px solid rgba(0, 0, 0, 0.1)
+    top: 1px solid rgba(255, 255, 255, 0.8)
   background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url(noise.png)
   background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url(noise.png)
   -webkit-transition: background .2s ease-in-out
   -moz-transition: background .2s ease-in-out
   /* color
   color: hsl(0, 0%, 40%) !important
-  background-color: hsl(0, 0%, 75%)
+  background:
+    color: hsl(0, 0%, 75%)
   -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(0, 0%, 60%) 0 0.1em 3px, hsl(0, 0%, 45%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px
   /* drop shadow
   -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(0, 0%, 60%) 0 0.1em 3px, hsl(0, 0%, 45%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px
   /* drop shadow
   &:before
-    font: 1.2em / 0 "Pictos", sans-serif
+    font: 1.2em / 0 'Pictos', sans-serif
     content: attr(data-icon)
-    /* gets the icon value from the custom data attribute and puts it infront of the button label
-    margin-right: 0.4em
+    margin:
+      right: 0.4em
 
 /* -------------- icon --------------
 
 .icon
-  font-weight: normal
-  font-style: normal
-  text-indent: -999em
+  font:
+    style: normal
+    weight: normal
+  text:
+    indent: -999em
   &:before
-    margin-right: 0
     display: block
     height: 0
-    text-indent: 0px
+    margin:
+      right: 0
+    text:
+      indent: 0px
 
 /* -------------- colours --------------
 
@@ -96,7 +105,8 @@
     color: rgba(0, 0, 0, 0.5) !important
     background-color: transparent
     background-image: none
-    &:hover, &:active
+    &:hover,
+    &:active
       background-color: transparent
       background-image: none
   &:hover
@@ -115,7 +125,7 @@
   &:focus
     outline: none
   &.disabled
-    opacity: .5
+    opacity: 0.5
     cursor: default
     color: rgba(0, 0, 0, 0.2) !important
     text-shadow: none !important
@@ -129,7 +139,7 @@
     -webkit-transform: translateY(5px)
     -moz-transform: translateY(5px)
     &:hover
-      opacity: .5
+      opacity: 0.5
       cursor: default
       color: rgba(0, 0, 0, 0.2) !important
       text-shadow: none !important
@@ -146,22 +156,26 @@
 /* -------------- Fonts --------------
 
 .serif
-  font-family: 'Lobster', serif
-  font-weight: normal
+  font:
+    family: 'Lobster', serif
+    weight: normal
 
 /* -------------- Sizes --------------
 
 .xs
-  font-size: 16px
+  font:
+    size: 16px
 
 .xl
-  font-size: 32px
+  font:
+    size: 32px
 
 /* -------------- Materials --------------
 
 .button
-  &.glossy:after, &.glass:after
-    content: ""
+  &.glossy:after,
+  &.glass:after
+    content: ''
     position: absolute
     width: 90%
     height: 60%
@@ -172,7 +186,7 @@
     background-image: -webkit-gradient(linear, 0% 0, 100% 0, from(rgba(255, 255, 255, 0.55)), to(rgba(255, 255, 255, 0.5)), color-stop(0.5, rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)))
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5))
   &.glossy:active:after, &.glass:active:after, &.disabled:after
-    opacity: .6
+    opacity: 0.6
   &.icon
     &.glossy:after, &.glass:after
       height: 75%
@@ -186,88 +200,110 @@
 /* round
 
 .round
-  border-top: none
+  border:
+    top: none
   -webkit-border-radius: 1em
   -moz-border-radius: 1em
-  &.glossy:after, &.glass:after
-    border-top: none
+  &.glossy:after,
+  &.glass:after
+    border:
+      top: none
     -webkit-border-radius: 1em
     -moz-border-radius: 1em
 
 /* oval
 
 .oval
-  border-top: none
-  padding-left: .8em
-  padding-right: .8em
+  border:
+    top: none
+  padding:
+    left: 0.8em
+    right: 0.8em
   -webkit-border-radius: 5em / 2em
   -moz-border-radius: 5em / 2em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     top: 5%
     -webkit-border-radius: 5em / 2em 2em 1em 1em
     -moz-border-radius: 5em / 2em 2em 1em 1em
   &.icon
-    padding-left: .8em
-    padding-right: .8em
+    padding:
+      left: 0.8em
+      right: 0.8em
     -webkit-border-radius: 1.5em / 1em
     -moz-border-radius: 1.5em / 1em
-    &.glossy:after, &.glass:after
+    &.glossy:after,
+    &.glass:after
       -webkit-border-radius: 1.5em / 1em
       -moz-border-radius: 1.5em / 1em
 
 /* brackets
 
 .brackets
-  border-top: none
+  border:
+    top: none
   -webkit-border-radius: 0.5em / 1em
   -moz-border-radius: 0.5em / 1em
-  &.glossy:after, &.glass:after
-    border-top: none
+  &.glossy:after,
+  &.glass:after
+    border:
+      top: none
     -webkit-border-radius: 0.5em / 1em
     -moz-border-radius: 0.5em / 1em
 
 /* skew
 
 .skew
-  border-top: none
-  padding-right: 1.2em
-  padding-left: 0.8em
+  border:
+    top: none
+  padding:
+    left: 0.8em
+    right: 1.2em
   -webkit-border-radius: 5em 1em / 5em 1em
   -moz-border-radius: 5em 1em / 5em 1em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     left: 10%
     -webkit-border-radius: 7em 1em / 5em 1em
     -moz-border-radius: 7em 1em / 5em 1em
   &.icon
-    padding-right: .9em
-    padding-left: .8em
+    padding:
+      left: 0.8em
+      right: 0.9em
 
 /* back
 
 .back
-  border-top-color: rgba(255, 255, 255, 0.5)
+  border:
+    top:
+      color: rgba(255, 255, 255, 0.5)
   -webkit-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
   -moz-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     border-top-color: rgba(255, 255, 255, 0.5)
     -webkit-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
     -moz-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     left: 6%
     width: 88%
 
 /* knife
 
 .knife
-  padding-left: 1.5em
+  padding:
+    left: 1.5em
   -webkit-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em
   -moz-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     left: 3%
     width: 97%
     -webkit-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em
     -moz-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em
-  &.glossy.icon:after, &.glass.icon:after
+  &.glossy.icon:after,
+  &.glass.icon:after
     left: 5%
     width: 95%
     -webkit-border-radius: 0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em
@@ -278,32 +314,39 @@
 .shield
   -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
   -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
     -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em
-  padding-left: .8em
-  padding-right: .8em
+  padding:
+    left: 0.8em
+    right: 0.8em
   &.icon
-    padding-left: .6em
-    padding-right: .6em
+    padding:
+      left: 0.6em
+      right: 0.6em
 
 /* drop
 
 .drop
-  border-top: none
+  border:
+    top: none
   -webkit-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em
   -moz-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em
-  &.glossy:after, &.glass:after
+  &.glossy:after,
+  &.glass:after
     left: 4%
     -webkit-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em
     -moz-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em
   &.icon
-    padding-right: .6em
+    padding:
+      right: 0.6em
 
 /* morph
 
 .morph
-  border-top: none
+  border:
+    top: none
   -webkit-border-radius: 5em / 2em
   -moz-border-radius: 5em / 2em
   -webkit-transition: -webkit-border-radius .3s ease-in-out
@@ -317,26 +360,32 @@
   &:after
     display: none
 
-/* Some ugly hacks for FF. 
- *Thanks to David Hund for some help - http://valuedstandards.com/static/test/buttons/
+/* Some ugly hacks for FF. Thanks to David Hund for some help - http://valuedstandards.com/static/test/buttons/
 @-moz-document url-prefix()
   .button
-    text-align: center
+    text:
+      align: center
   .icon
-    padding: .5em 1em
+    padding: 0.5em 1em
     &:before
-      margin-left: -0.42em
       float: left
+      margin:
+        left: -0.42em
   .drop.icon
-    padding-right: 1.1em
+    padding:
+      right: 1.1em
   .shield.icon
-    padding-left: 1.1em
-    padding-right: 1.1em
+    padding:
+      left: 1.1em
+      right: 1.1em
   .skew.icon
-    padding-right: 1.4em
-    padding-left: 1.3em
+    padding:
+      left: 1.3em
+      right: 1.4em
   .oval.icon
-    padding-left: 1.3em
-    padding-right: 1.3em
+    padding:
+      left: 1.3em
+      right: 1.3em
   .knife
-    padding-left: 2em
+    padding:
+      left: 2em
