@@ -26,6 +26,7 @@
     top: 1px solid rgba(255, 255, 255, 0.8)
   background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url(noise.png)
   background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url(noise.png)
+  // FIXME doesn't output shorthand styles, which doesn't currently work
   //@include transition(background, 0.2s, ease-in-out)
   -webkit-transition: background .2s ease-in-out
   -moz-transition: background .2s ease-in-out
@@ -286,6 +287,7 @@
   border:
     top: none
   @include border-radius(5em / 2em)
+  // FIXME doesn't output shorthand styles, which doesn't currently work
   //@include transition(border-radius, 0.3s, ease-in-out)
   -webkit-transition: -webkit-border-radius .3s ease-in-out
   -moz-transition: -moz-border-radius .3s ease-in-out
