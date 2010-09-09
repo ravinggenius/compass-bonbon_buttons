@@ -160,8 +160,7 @@
     top: 0
     left: 5%
     +border-radius(0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em)
-    background-image: -webkit-gradient(linear, 0% 0, 100% 0, from(rgba(255, 255, 255, 0.55)), to(rgba(255, 255, 255, 0.5)), color-stop(0.5, rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)))
-    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5))
+    +linear-gradient(color-stops(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), left)
   &.glossy:active:after, &.glass:active:after, &.disabled:after
     opacity: 0.6
   &.icon
