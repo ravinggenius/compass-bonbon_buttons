@@ -5,7 +5,7 @@ Original by [simurai](http://lab.simurai.com/css/buttons/ "BonBon buttons homepa
 ## BonBon ##
 #### Sweet CSS3 Buttons ####
 
-![BonBon Buttons Preview](preview.png "BonBon Buttons Preview")
+![BonBon Buttons Preview](compass-bonbon_buttons/blob/master/preview.png "BonBon Buttons Preview")
 
 **[There was a goal:](http://twitter.com/simurai/status/21675061641) Create CSS buttons that are sexy looking, really flexible, but with the most minimalistic markup as possible.**
 
