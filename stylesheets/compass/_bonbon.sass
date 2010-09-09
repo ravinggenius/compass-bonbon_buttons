@@ -1,8 +1,6 @@
 @import compass/css3
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:bold+Lobster)
-@import url(http://fonts.googleapis.com/css?family=Lobster)
-@import url(pictos/pictos.css)
+
 
 /* BonBon Buttons 1.0 by simurai.com
 
@@ -21,9 +19,11 @@
   display: inline-block
   position: relative
   @include border-radius(8px)
-  border:
-    bottom: 1px solid rgba(0, 0, 0, 0.1)
-    top: 1px solid rgba(255, 255, 255, 0.8)
+  border: 1px solid
+    bottom-color: rgba(0, 0, 0, 0.1)
+    top-color: rgba(255, 255, 255, 0.8)
+    left: none
+    right: none
   background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url(noise.png)
   background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url(noise.png)
   // FIXME doesn't output shorthand styles, which doesn't currently work
