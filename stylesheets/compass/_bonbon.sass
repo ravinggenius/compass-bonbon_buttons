@@ -18,7 +18,7 @@
   margin: 0.5em
   display: inline-block
   position: relative
-  @include border-radius(8px)
+  +border-radius(8px)
   border: 1px solid
     bottom-color: rgba(0, 0, 0, 0.1)
     top-color: rgba(255, 255, 255, 0.8)
@@ -27,7 +27,7 @@
   background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url(noise.png)
   background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url(noise.png)
   // FIXME doesn't output shorthand styles, which doesn't currently work
-  //@include transition(background, 0.2s, ease-in-out)
+  //+transition(background, 0.2s, ease-in-out)
   -webkit-transition: background .2s ease-in-out
   -moz-transition: background .2s ease-in-out
   color: hsl(0, 0%, 40%) !important
@@ -98,13 +98,13 @@
       background-image: none
   &:hover
     background-color: hsl(0, 0%, 83%)
-    @include translate(0, -1px)
+    +translate(0, -1px)
   &:active
     background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(noise.png)
     background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(noise.png)
     -webkit-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
     -moz-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
-    @include translate(0, 0.2em)
+    +translate(0, 0.2em)
   &:focus
     outline: none
   &.disabled
@@ -117,7 +117,7 @@
     border-top: none
     -webkit-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
     -moz-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
-    @include translate(0, 5px)
+    +translate(0, 5px)
     &:hover
       opacity: 0.5
       cursor: default
@@ -128,7 +128,7 @@
       border-top: none
       -webkit-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
       -moz-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
-      @include translate(0, 5px)
+      +translate(0, 5px)
 
 /* -------------- Fonts --------------
 
@@ -158,7 +158,7 @@
     height: 60%
     top: 0
     left: 5%
-    @include border-radius(0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em)
+    +border-radius(0.5em 0.5em 1em 1em / 0.5em 0.5em 2em 2em)
     background-image: -webkit-gradient(linear, 0% 0, 100% 0, from(rgba(255, 255, 255, 0.55)), to(rgba(255, 255, 255, 0.5)), color-stop(0.5, rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)))
     background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5))
   &.glossy:active:after, &.glass:active:after, &.disabled:after
@@ -176,12 +176,12 @@
 .round
   border:
     top: none
-  @include border-radius(1em)
+  +border-radius(1em)
   &.glossy:after,
   &.glass:after
     border:
       top: none
-    @include border-radius(1em)
+    +border-radius(1em)
 
 .oval
   border:
@@ -189,29 +189,29 @@
   padding:
     left: 0.8em
     right: 0.8em
-  @include border-radius(5em / 2em)
+  +border-radius(5em / 2em)
   &.glossy:after,
   &.glass:after
     top: 5%
-    @include border-radius(5em / 2em 2em 1em 1em)
+    +border-radius(5em / 2em 2em 1em 1em)
   &.icon
     padding:
       left: 0.8em
       right: 0.8em
-    @include border-radius(1.5em / 1em)
+    +border-radius(1.5em / 1em)
     &.glossy:after,
     &.glass:after
-      @include border-radius(1.5em / 1em)
+      +border-radius(1.5em / 1em)
 
 .brackets
   border:
     top: none
-  @include border-radius(0.5em / 1em)
+  +border-radius(0.5em / 1em)
   &.glossy:after,
   &.glass:after
     border:
       top: none
-    @include border-radius(0.5em / 1em)
+    +border-radius(0.5em / 1em)
 
 .skew
   border:
@@ -219,11 +219,11 @@
   padding:
     left: 0.8em
     right: 1.2em
-  @include border-radius(5em 1em / 5em 1em)
+  +border-radius(5em 1em / 5em 1em)
   &.glossy:after,
   &.glass:after
     left: 10%
-    @include border-radius(7em 1em / 5em 1em)
+    +border-radius(7em 1em / 5em 1em)
   &.icon
     padding:
       left: 0.8em
@@ -233,11 +233,11 @@
   border:
     top:
       color: rgba(255, 255, 255, 0.5)
-  @include border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
+  +border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
   &.glossy:after,
   &.glass:after
     border-top-color: rgba(255, 255, 255, 0.5)
-    @include border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
+    +border-radius(1.6em 1.6em 1em 1em / 4em 4em 1em 1em)
   &.glossy:after,
   &.glass:after
     left: 6%
@@ -246,23 +246,23 @@
 .knife
   padding:
     left: 1.5em
-  @include border-radius(0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em)
+  +border-radius(0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em)
   &.glossy:after,
   &.glass:after
     left: 3%
     width: 97%
-    @include border-radius(0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em)
+    +border-radius(0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em)
   &.glossy.icon:after,
   &.glass.icon:after
     left: 5%
     width: 95%
-    @include border-radius(0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em)
+    +border-radius(0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em)
 
 .shield
-  @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
+  +border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   &.glossy:after,
   &.glass:after
-    @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
+    +border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   padding:
     left: 0.8em
     right: 0.8em
@@ -274,11 +274,11 @@
 .drop
   border:
     top: none
-  @include border-radius(2em 5em 2em 0.6em / 2em 4em 2em 0.6em)
+  +border-radius(2em 5em 2em 0.6em / 2em 4em 2em 0.6em)
   &.glossy:after,
   &.glass:after
     left: 4%
-    @include border-radius(2em 6em 2em 1em / 2em 4em 2em 2em)
+    +border-radius(2em 6em 2em 1em / 2em 4em 2em 2em)
   &.icon
     padding:
       right: 0.6em
@@ -286,15 +286,15 @@
 .morph
   border:
     top: none
-  @include border-radius(5em / 2em)
+  +border-radius(5em / 2em)
   // FIXME doesn't output shorthand styles, which doesn't currently work
-  //@include transition(border-radius, 0.3s, ease-in-out)
+  //+transition(border-radius, 0.3s, ease-in-out)
   -webkit-transition: -webkit-border-radius .3s ease-in-out
   -moz-transition: -moz-border-radius .3s ease-in-out
   &:hover
-    @include border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
+    +border-radius(0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em)
   &:active
-    @include border-radius(0.3em)
+    +border-radius(0.3em)
   &:after
     display: none
 
