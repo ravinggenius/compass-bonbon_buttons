@@ -1,0 +1,6 @@
+// If you're only transitioning one property or the 'all' property, consider using this one shorthand version instead:
+=transi($property: $default-transition-property, $duration: $default-transition-duration, $function: $default-transition-function, $delay: $default-transition-delay)
+  @if $delay
+    +experimental(transition, $property $duration $function $delay, -moz, -webkit, -o, not -ms, not -khtml, official)
+  @else
+    +experimental(transition, $property $duration $function, -moz, -webkit, -o, not -ms, not -khtml, official)
