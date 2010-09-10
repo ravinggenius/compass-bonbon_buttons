@@ -1,7 +1,6 @@
 @import compass/css3
 @import transition
 
-
 /* BonBon Buttons 1.0 by simurai.com
 
 /* -------------- button --------------
@@ -24,8 +23,8 @@
     top-color: rgba(255, 255, 255, 0.8)
     left: none
     right: none
-  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), image-url("noise.png")
-  background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), image-url("noise.png")
+  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), image-url('noise.png')
+  background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), image-url('noise.png')
   +transi(background, 0.2s, ease-in-out)
   color: hsl(0, 0%, 40%) !important
   background:
@@ -102,9 +101,7 @@
     background-color: hsl(0, 0%, 83%)
     +translate(0, -1px)
   &:active
-    // background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), image-url("noise.png")
-    // background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), image-url("noise.png")
-    +radial-gradient(color-stops(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), top center, image-url("noise.png"))
+    +radial-gradient(color-stops(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), top center, image-url('noise.png'))
     -webkit-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
     -moz-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
     box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px
